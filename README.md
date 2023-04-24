@@ -1,16 +1,19 @@
 # cryptozap
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Assignment Project
 
-A few resources to get you started if this is your first Flutter project:
+Installation : 
+    1. Install Flutter
+    2. Clone the repo from github
+    3. Write command - flutter pub get
+    4. connect a device / start emulator and run the app
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Packages Used :
+    1. flutter_bloc - for state management
+    2. dio - for http requests (api request)
+    3. pretty_dio_logger - it prints the api response in the terminal
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Api Used :
+    1. Binance Api - For Fetching Currency
