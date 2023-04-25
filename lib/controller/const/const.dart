@@ -15,6 +15,7 @@ backpage(context) {
 var colorBlack = const Color(0xFF050505);
 var colorWhite = const Color(0xFFFFFFFF);
 var colorDanger = Colors.red;
+var colorGreen = Colors.green;
 var colorTransparent = Colors.transparent;
 
 // API Keys and Values

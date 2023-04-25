@@ -8,8 +8,7 @@ class API {
   API() {
     _dio.options.baseUrl = mainHost;
     _dio.options.queryParameters = {
-      "per_page": "8",
-      "page": 1,
+      "vs_currency": "usd",
     };
     _dio.interceptors.add(PrettyDioLogger());
   }
