@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../controller/logics/internet_cubits/internet_state.dart';
 import '../controller/widgets/custom_app_bar.dart';
+import '../controller/widgets/custom_button.dart';
 import '../controller/widgets/custom_text_widget.dart';
 
 class AllList extends StatelessWidget {
@@ -48,8 +49,12 @@ class AllList extends StatelessWidget {
                       if (postState is PostLoadedState) {
                         return Padding(
                           padding: const EdgeInsets.all(15.0),
-                          child: connectedWithData(
-                              postState, postState.posts.length),
+                          child: Column(
+                            children: [
+                              connectedWithData(
+                                  postState, postState.posts.length),
+                            ],
+                          ),
                         );
                       }
                     } else if (internetState is InternetLostState) {

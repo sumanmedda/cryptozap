@@ -14,6 +14,8 @@ Packages Used :
     1. flutter_bloc - for state management
     2. dio - for http requests (api request)
     3. pretty_dio_logger - it prints the api response in the terminal
+    4. Connectivity - TO Check connectivity of internet
+    5. Hive - For Local Database
 
 Api Used :
-    1. Binance Api - For Fetching Currency
+    1. Coingecko Api - For Fetching Currency
