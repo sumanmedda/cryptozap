@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 
 // Navigate To Next Page
 nextpage(context, path) {
@@ -19,5 +20,8 @@ var colorGreen = Colors.green;
 var colorTransparent = Colors.transparent;
 
 // API Keys and Values
-
 const mainHost = "https://api.coingecko.com/api/v3";
+
+// local Storage
+
+var db = Hive.box('data');

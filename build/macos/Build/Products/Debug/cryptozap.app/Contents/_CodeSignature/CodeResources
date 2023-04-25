@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		7Yr1d+0c8e3k2YO+eSMCqA0ypGw=
+		cXICt3DRt4gY4KRcjh0RfFk1HX0=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<data>
@@ -23,10 +23,10 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			7nx43dkdZGvN/nm6pOJMQokMsCA=
+			AF1aAAXtSmhTiRY8F3yKKM01+2k=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"ee7c78ddd91d646bcdfe79baa4e24c42890cb020"</string>
+			<string>cdhash H"005d5a0005ed4a685389163c177c8a28cd35fb69"</string>
 		</dict>
 		<key>Frameworks/FlutterMacOS.framework</key>
 		<dict>
@@ -36,6 +36,24 @@
 			</data>
 			<key>requirement</key>
 			<string>cdhash H"d7874078a0d306f2732a5548db7828797bf3f89c"</string>
+		</dict>
+		<key>Frameworks/Reachability.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			nFFeRkCBdTIiZFoIf4gKbTyJmzA=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"b9fde8d9968ca50d3a837d6cc46d25881a807cb8" or cdhash H"9c515e464081753222645a087f880a6d3c899b30"</string>
+		</dict>
+		<key>Frameworks/connectivity_macos.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			6HlOyWOjqrD9B7vC4ZGYsRMvS8o=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"e8794ec963a3aab0fd07bbc2e19198b1132f4bca"</string>
 		</dict>
 		<key>Frameworks/libswiftAppKit.dylib</key>
 		<dict>
@@ -190,6 +208,15 @@
 			<key>requirement</key>
 			<string>cdhash H"3406aab10f486b91c2d9334de341504de56a5631" or cdhash H"73e04119822f2d8cd5eeb426ddac2b2b98295def"</string>
 		</dict>
+		<key>Frameworks/path_provider_foundation.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Wt+qjH0XspEstfw13UrVfYUuf8s=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"5adfaa8c7d17b2912cb5fc35dd4ad57d852e7fcb"</string>
+		</dict>
 		<key>Resources/AppIcon.icns</key>
 		<dict>
 			<key>hash2</key>
@@ -201,7 +228,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pSO3mYYwSIJZUT0FwO08+06ZNqdkL8XYtxB4+77v2kU=
+			w6BuYyhSabFS5qVPLrORv1ZaxFKy0vbyXc4uCw4LNmk=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/MainMenu.nib</key>

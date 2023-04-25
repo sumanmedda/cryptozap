@@ -1,16 +1,26 @@
+import 'package:hive/hive.dart';
+
+@HiveType(typeId: 1)
 class PostModel {
+  @HiveField(0)
   String? id;
   String? symbol;
+  @HiveField(1)
   String? name;
+  @HiveField(2)
   String? image;
+  @HiveField(3)
   dynamic currentPrice;
+  @HiveField(4)
   int? marketCap;
   int? marketCapRank;
   int? fullyDilutedValuation;
+  @HiveField(5)
   dynamic totalVolume;
   dynamic high24h;
   dynamic low24h;
   dynamic priceChange24h;
+  @HiveField(6)
   dynamic priceChangePercentage24h;
   dynamic marketCapChange24h;
   dynamic marketCapChangePercentage24h;
