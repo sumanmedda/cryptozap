@@ -1,96 +1,60 @@
 class PostModel {
-  String? symbol;
-  String? priceChange;
-  String? priceChangePercent;
-  String? weightedAvgPrice;
-  String? prevClosePrice;
-  String? lastPrice;
-  String? lastQty;
-  String? bidPrice;
-  String? bidQty;
-  String? askPrice;
-  String? askQty;
-  String? openPrice;
-  String? highPrice;
-  String? lowPrice;
-  String? volume;
-  String? quoteVolume;
-  int? openTime;
-  int? closeTime;
-  int? firstId;
-  int? lastId;
-  int? count;
+  String? id;
+  String? name;
+  int? yearEstablished;
+  String? country;
+  String? description;
+  String? url;
+  String? image;
+  bool? hasTradingIncentive;
+  int? trustScore;
+  int? trustScoreRank;
+  double? tradeVolume24hBtc;
+  double? tradeVolume24hBtcNormalized;
 
   PostModel(
-      {this.symbol,
-      this.priceChange,
-      this.priceChangePercent,
-      this.weightedAvgPrice,
-      this.prevClosePrice,
-      this.lastPrice,
-      this.lastQty,
-      this.bidPrice,
-      this.bidQty,
-      this.askPrice,
-      this.askQty,
-      this.openPrice,
-      this.highPrice,
-      this.lowPrice,
-      this.volume,
-      this.quoteVolume,
-      this.openTime,
-      this.closeTime,
-      this.firstId,
-      this.lastId,
-      this.count});
+      {this.id,
+      this.name,
+      this.yearEstablished,
+      this.country,
+      this.description,
+      this.url,
+      this.image,
+      this.hasTradingIncentive,
+      this.trustScore,
+      this.trustScoreRank,
+      this.tradeVolume24hBtc,
+      this.tradeVolume24hBtcNormalized});
 
   PostModel.fromJson(Map<String, dynamic> json) {
-    symbol = json['symbol'];
-    priceChange = json['priceChange'];
-    priceChangePercent = json['priceChangePercent'];
-    weightedAvgPrice = json['weightedAvgPrice'];
-    prevClosePrice = json['prevClosePrice'];
-    lastPrice = json['lastPrice'];
-    lastQty = json['lastQty'];
-    bidPrice = json['bidPrice'];
-    bidQty = json['bidQty'];
-    askPrice = json['askPrice'];
-    askQty = json['askQty'];
-    openPrice = json['openPrice'];
-    highPrice = json['highPrice'];
-    lowPrice = json['lowPrice'];
-    volume = json['volume'];
-    quoteVolume = json['quoteVolume'];
-    openTime = json['openTime'];
-    closeTime = json['closeTime'];
-    firstId = json['firstId'];
-    lastId = json['lastId'];
-    count = json['count'];
+    id = json['id'];
+    name = json['name'];
+    yearEstablished = json['year_established'];
+    country = json['country'];
+    description = json['description'];
+    url = json['url'];
+    image = json['image'];
+    hasTradingIncentive = json['has_trading_incentive'];
+    trustScore = json['trust_score'];
+    trustScoreRank = json['trust_score_rank'];
+    tradeVolume24hBtc = json['trade_volume_24h_btc'];
+    tradeVolume24hBtcNormalized = json['trade_volume_24h_btc_normalized'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['symbol'] = symbol;
-    data['priceChange'] = priceChange;
-    data['priceChangePercent'] = priceChangePercent;
-    data['weightedAvgPrice'] = weightedAvgPrice;
-    data['prevClosePrice'] = prevClosePrice;
-    data['lastPrice'] = lastPrice;
-    data['lastQty'] = lastQty;
-    data['bidPrice'] = bidPrice;
-    data['bidQty'] = bidQty;
-    data['askPrice'] = askPrice;
-    data['askQty'] = askQty;
-    data['openPrice'] = openPrice;
-    data['highPrice'] = highPrice;
-    data['lowPrice'] = lowPrice;
-    data['volume'] = volume;
-    data['quoteVolume'] = quoteVolume;
-    data['openTime'] = openTime;
-    data['closeTime'] = closeTime;
-    data['firstId'] = firstId;
-    data['lastId'] = lastId;
-    data['count'] = count;
+    Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['year_established'] = yearEstablished;
+    data['country'] = country;
+    data['description'] = description;
+    data['url'] = url;
+    data['image'] = image;
+    data['has_trading_incentive'] = hasTradingIncentive;
+    data['trust_score'] = trustScore;
+    data['trust_score_rank'] = trustScoreRank;
+    data['trade_volume_24h_btc'] = tradeVolume24hBtc;
+    data['trade_volume_24h_btc_normalized'] = tradeVolume24hBtcNormalized;
     return data;
   }
 }

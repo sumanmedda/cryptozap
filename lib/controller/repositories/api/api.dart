@@ -7,9 +7,9 @@ class API {
 
   API() {
     _dio.options.baseUrl = mainHost;
-    _dio.options.headers = {
-      "X-RapidAPI-Key": rapidKey,
-      "X-RapidAPI-Host": rapidHost,
+    _dio.options.queryParameters = {
+      "per_page": "8",
+      "page": 1,
     };
     _dio.interceptors.add(PrettyDioLogger());
   }

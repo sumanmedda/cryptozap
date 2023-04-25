@@ -7,7 +7,7 @@ class PostRepository {
 
   Future<List<PostModel>> fetchPosts() async {
     try {
-      Response response = await api.sendRequest.get("/ticker/24hr");
+      Response response = await api.sendRequest.get("/exchanges");
       List<dynamic> postMaps = response.data;
       return postMaps.map((postMap) => PostModel.fromJson(postMap)).toList();
     } catch (e) {

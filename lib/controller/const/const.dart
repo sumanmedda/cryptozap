@@ -12,12 +12,11 @@ backpage(context) {
 
 // Colors
 
-var appBlack = const Color(0xFF050505);
-var appWhite = const Color(0xFFFFFFFF);
-var appDanger = Colors.red;
+var colorBlack = const Color(0xFF050505);
+var colorWhite = const Color(0xFFFFFFFF);
+var colorDanger = Colors.red;
+var colorTransparent = Colors.transparent;
 
 // API Keys and Values
 
-const mainHost = "https://binance43.p.rapidapi.com";
-const rapidKey = "b5867ef153msh0e49160c567e6fbp1fc903jsn2495ca73e5eb";
-const rapidHost = "binance43.p.rapidapi.com";
+const mainHost = "https://api.coingecko.com/api/v3";
