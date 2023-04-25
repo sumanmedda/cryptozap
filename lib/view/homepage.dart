@@ -5,6 +5,7 @@ import 'package:cryptozap/controller/logics/internet_cubits/internet_cubits.dart
 import 'package:cryptozap/controller/logics/post_cubits/post_cubit.dart';
 import 'package:cryptozap/controller/logics/post_cubits/post_state.dart';
 import 'package:cryptozap/model/post_model.dart';
+import 'package:cryptozap/view/all_list.dart';
 import 'package:cryptozap/view/more_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -51,7 +52,7 @@ class Homepage extends StatelessWidget {
                           padding: const EdgeInsets.all(15.0),
                           child: Column(
                             children: [
-                              connectedWithData(postState),
+                              connectedWithData(postState, 8),
                               Expanded(
                                   child: Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -62,7 +63,9 @@ class Homepage extends StatelessWidget {
                                   buttonTextColor: colorBlack,
                                   textIsBold: true,
                                   fontSize: 16,
-                                  onTap: () {},
+                                  onTap: () {
+                                    nextpage(context, const AllList());
+                                  },
                                 ),
                               )),
                             ],
@@ -177,70 +180,6 @@ class Homepage extends StatelessWidget {
                   },
                 )),
       ),
-    );
-  }
-
-  Expanded connectedWithData(PostLoadedState postState) {
-    return Expanded(
-      flex: 9,
-      child: ListView.builder(
-          physics: const BouncingScrollPhysics(),
-          itemCount: 8,
-          itemBuilder: (context, index) {
-            PostModel path = postState.posts[index];
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                decoration: BoxDecoration(
-                    color: colorWhite, borderRadius: BorderRadius.circular(12)),
-                child: ListTile(
-                  onTap: () {
-                    nextpage(context, MoreDetailsPage(data: path));
-                  },
-                  leading: SizedBox(
-                    height: 30,
-                    width: 30,
-                    child: CircleAvatar(
-                      backgroundColor: colorTransparent,
-                      backgroundImage: NetworkImage(path.image!),
-                    ),
-                  ),
-                  title: CustomTextApp(
-                    text: path.name!.toString(),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                    textColor: colorBlack,
-                  ),
-                  subtitle: CustomTextApp(
-                    text: path.symbol!.toString(),
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
-                    textColor: colorBlack,
-                  ),
-                  trailing: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CustomTextApp(
-                        text: '${path.priceChangePercentage24h!.toString()}%',
-                        fontWeight: FontWeight.normal,
-                        fontSize: 12,
-                        textColor:
-                            path.priceChangePercentage24h.toString()[0] == "-"
-                                ? colorDanger
-                                : colorGreen,
-                      ),
-                      CustomTextApp(
-                        text: "\$${path.currentPrice!.toString()}",
-                        fontWeight: FontWeight.normal,
-                        fontSize: 15,
-                        textColor: colorBlack,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            );
-          }),
     );
   }
 }

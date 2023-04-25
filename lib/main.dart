@@ -5,9 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'model/post_model.dart';
+
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox('data');
+  Hive.registerAdapter(PostModelAdapter());
   runApp(const MyApp());
 }
 
