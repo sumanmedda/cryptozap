@@ -11,7 +11,7 @@ class PostCubit extends Cubit<PostState> {
 
   PostRepository postRepository = PostRepository();
 
-  void fetchPost() async {
+  fetchPost() async {
     try {
       List<PostModel> posts = await postRepository.fetchPosts();
       emit(PostLoadedState(posts));

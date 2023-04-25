@@ -31,7 +31,7 @@ const mainHost = "https://api.coingecko.com/api/v3";
 
 var db = Hive.box('data');
 
-//
+//if network is connected
 Expanded connectedWithData(PostLoadedState postState, length) {
   return Expanded(
     flex: 9,
@@ -47,7 +47,12 @@ Expanded connectedWithData(PostLoadedState postState, length) {
                   color: colorWhite, borderRadius: BorderRadius.circular(12)),
               child: ListTile(
                 onTap: () {
-                  nextpage(context, MoreDetailsPage(data: path));
+                  nextpage(
+                      context,
+                      MoreDetailsPage(
+                        coinName: path.name!,
+                        index: index,
+                      ));
                 },
                 leading: SizedBox(
                   height: 30,
@@ -94,4 +99,72 @@ Expanded connectedWithData(PostLoadedState postState, length) {
           );
         }),
   );
+}
+
+// if Network is not connected
+ListView disConnectedData() {
+  return ListView.builder(
+      physics: const BouncingScrollPhysics(),
+      itemCount: 8,
+      itemBuilder: (context, index) {
+        List<dynamic> post = db.get('posts');
+        var path = post[index];
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            decoration: BoxDecoration(
+                color: colorWhite, borderRadius: BorderRadius.circular(12)),
+            child: ListTile(
+              onTap: () {
+                nextpage(
+                    context,
+                    MoreDetailsPage(
+                      coinName: path['name'],
+                      index: index,
+                    ));
+              },
+              leading: SizedBox(
+                height: 30,
+                width: 30,
+                child: CircleAvatar(
+                  backgroundColor: colorTransparent,
+                  backgroundImage: NetworkImage(path['image']!),
+                ),
+              ),
+              title: CustomTextApp(
+                text: path['name']!.toString(),
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+                textColor: colorBlack,
+              ),
+              subtitle: CustomTextApp(
+                text: path['symbol']!.toString(),
+                fontWeight: FontWeight.normal,
+                fontSize: 12,
+                textColor: colorBlack,
+              ),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomTextApp(
+                    text: '${path['price_change_percentage_24h']!.toString()}%',
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                    textColor:
+                        path['price_change_percentage_24h'].toString()[0] == "-"
+                            ? colorDanger
+                            : colorGreen,
+                  ),
+                  CustomTextApp(
+                    text: "\$${path['current_price']!.toString()}",
+                    fontWeight: FontWeight.normal,
+                    fontSize: 15,
+                    textColor: colorBlack,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      });
 }

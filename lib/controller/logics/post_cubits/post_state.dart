@@ -6,6 +6,7 @@ class PostLoadingState extends PostState {}
 
 class PostLoadedState extends PostState {
   final List<PostModel> posts;
+
   PostLoadedState(this.posts);
 }
 
