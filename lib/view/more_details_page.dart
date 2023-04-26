@@ -47,6 +47,7 @@ class MoreDetailsPage extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             children: [
+                              // Reuseable widget for showing more information
                               CoinMoreData(
                                   title: "Price",
                                   value: '\$${path.currentPrice.toString()}'),

@@ -1,6 +1,0 @@
-version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
-options: "932fc64cdb3b31861e69eb66a3a0029a8002c0063a290b111e92dd6d4f329468"
-build_start_time: [1682428464, 573841094]
-build_end_time: [1682428464, 638351917]
-inputs:
-  "/Users/suman/.pub-cache/hosted/pub.dev/connectivity_macos-0.2.1+2/macos/Classes/ConnectivityPlugin.swift": !private [1682423800, 705123424]

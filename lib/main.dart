@@ -8,6 +8,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'model/post_model.dart';
 
 void main() async {
+  // Init hive - for local database and registering it
   await Hive.initFlutter();
   await Hive.openBox('data');
   Hive.registerAdapter(PostModelAdapter());

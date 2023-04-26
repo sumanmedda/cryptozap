@@ -1,8 +1,0 @@
-version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
-options: "4ada68337c3c154455cf89a97d6322285649ee79cbebb5f09f29538a649e9b0a"
-build_start_time: [1682434962, 632125854]
-build_end_time: [1682434977, 958060979]
-inputs:
-  "/Users/suman/Desktop/Digiprayas/own-projects/flutter/cryptozap/macos/Flutter/GeneratedPluginRegistrant.swift": [1682434947, 731134414]
-  "/Users/suman/Desktop/Digiprayas/own-projects/flutter/cryptozap/macos/Runner/AppDelegate.swift": [1675961119, 0]
-  "/Users/suman/Desktop/Digiprayas/own-projects/flutter/cryptozap/macos/Runner/MainFlutterWindow.swift": [1675961119, 0]

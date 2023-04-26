@@ -4,11 +4,16 @@
 
 Assignment Project
 
+About:
+    A cryptocurrency price tracking application using the Flutter framework with the BLoC state management using repository pattern.
+
+Api Used :
+    1. Coingecko Api - For Fetching Currency and details.
+
 Installation : 
-    1. Install Flutter
-    2. Clone the repo from github
-    3. Write command - flutter pub get
-    4. connect a device / start emulator and run the app
+    1. Clone the repo from github
+    2. Write command - flutter pub get
+    3. connect a device / start emulator and run the app
 
 Packages Used :
     1. flutter_bloc - for state management
@@ -17,5 +22,3 @@ Packages Used :
     4. Connectivity - TO Check connectivity of internet
     5. Hive - For Local Database
 
-Api Used :
-    1. Coingecko Api - For Fetching Currency
