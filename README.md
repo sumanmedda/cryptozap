@@ -22,3 +22,6 @@ Packages Used :
     4. Connectivity - TO Check connectivity of internet
     5. Hive - For Local Database
 
+Working: 
+    This app will fetch data related to cryptocurrency also if internet is not connected then it will display the last data stored when the connection is back it will display the data fetched from API.
+
